@@ -1,0 +1,129 @@
+.colorgrad {
+  background: radial-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%) 
+  ) fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+} 
+
+body {
+  background: hsl(204 100% 5%);
+  min-block-size: 140vh;
+  padding: 10vmin;
+  box-sizing: border-box;
+  place-content: center;
+}
+
+footer {
+	/*TODO:  Make Footer*/
+}
+
+h1 {
+	font-family: system-ui;
+	font-size: 12vmin;
+	line-height: 1.1;
+	max-inline-size: 100ch;
+	margin: auto;
+}
+
+h2 {
+	font-family: ui-monospace, monospace;
+	margin-top: 1ch;
+	line-height: 1.1;
+	/*max-inline-size: 100ch;*/
+	margin: auto;
+	font-size: 7vmin;
+}
+
+p {
+	font-family: FreeMono, monospace;
+	color: white;
+	margin-top: 1ch;
+	line-height: 1.35;
+	/*max-inline-size: 60ch;*/
+	margin: auto;
+	font-size: 3vmin;
+	padding: 2vmin;
+}
+
+.pCopyright {
+	font-size: 1.5vmin;
+}
+
+p span {
+	animation: color-fade 20s infinite;
+}
+
+@keyframes color-fade {
+  0% { color: red; }
+  5% { color: orangered; }
+  10% { color: orange; }
+  15% { color: yellow; }
+  20% { color: yellowgreen; }
+  25% { color: green; }
+  30% { color: cyan; }
+  35% { color: blue; }
+  40% { color: purple; }
+  45% { color: pink; }
+  50% { color: magenta; }
+  55% { color: pink; }
+  60% { color: purple; }
+  65% { color: blue; }
+  70% { color: cyan; }
+  75% { color: green; }
+  80% { color: yellowgreen; }
+  85% { color: yellow; }
+  90% { color: orange; }
+  95% { color: orangered; }
+  100% { color: red; }
+}
+
+.button1 {
+	/*length:  80hmax;*/
+	width: 65vmin;
+	font-size: 7.5vmin;
+	font-weight: 800;
+	font: system-ui;
+	color: hsl(204 100% 5%);
+	border-radius: 24px;
+	padding: 12px 45px;
+	background: radial-gradient(
+	hsl(100 100% 60%), 
+	hsl(200 100% 60%) 
+	) fixed;
+	transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 6vmin;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+html {
+	block-size: 100%;
+	inline-size: 100%;
+	text-align: center;
+}
