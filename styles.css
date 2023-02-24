@@ -1,12 +1,56 @@
 .colorgrad {
   background: radial-gradient(
-    hsl(100 100% 60%), 
+    hsl(278 75% 60%), 
     hsl(200 100% 60%) 
   ) fixed;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
 } 
+
+/* HEADER1 STYLING, ANIMATION AND VISIBILITY */
+
+h1 {
+	font-family: system-ui;
+	font-size: 6vw;
+	line-height: 1.1;
+	max-inline-size: 100ch;
+	margin: auto;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 0;
+	animation: typing 2s steps(22) 1s forwards;
+	animation-timing-function: steps(22, end);
+	visibility: hidden;
+}
+
+h1.visible {
+			visibility: visible;
+		}
+
+@keyframes typing {
+			to { width: 100%; }
+}
+
+/* HEADER2 STYLING AND ANIMATION */
+
+h2 {
+	font-family: ui-monospace, monospace;
+	font-size: 2vw;
+	line-height: 1.1;
+	max-inline-size: 100ch;
+	margin: auto;
+	opacity: 0;
+	animation: fade-in 2s 3s forwards;
+}
+
+@keyframes fade-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/* BODY STYLING AND ANIMATION */
 
 body {
   background: hsl(204 100% 5%);
@@ -16,26 +60,23 @@ body {
   place-content: center;
 }
 
+.slideinanimation {
+	  opacity: 0;
+		animation: slide-in 1s 5s forwards;
+}
+
+@keyframes slide-in {
+	from { transform: translateX(-100%); }
+	to { transform: translateX(0%); opacity: 1; }
+}
+
+
+
 footer {
 	/*TODO:  Make Footer*/
 }
 
-h1 {
-	font-family: system-ui;
-	font-size: 12vmin;
-	line-height: 1.1;
-	max-inline-size: 100ch;
-	margin: auto;
-}
 
-h2 {
-	font-family: ui-monospace, monospace;
-	margin-top: 1ch;
-	line-height: 1.1;
-	/*max-inline-size: 100ch;*/
-	margin: auto;
-	font-size: 7vmin;
-}
 
 p {
 	font-family: FreeMono, monospace;
@@ -90,7 +131,7 @@ p span {
 	border-radius: 24px;
 	padding: 12px 45px;
 	background: radial-gradient(
-	hsl(100 100% 60%), 
+	hsl(278 50% 60%), 
 	hsl(200 100% 60%) 
 	) fixed;
 	transition: all 0.5s;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Live typing effect</title>
+	<style>
+		h1 {
+			display: inline-block;
+			white-space: nowrap;
+			overflow: hidden;
+			width: 0;
+			animation: typing 2s steps(22) forwards;
+			animation-timing-function: steps(22, end);
+			visibility: hidden;
+		}
+
+		h2 {
+			opacity: 0;
+			animation: fade-in 2s 3s forwards;
+		}
+
+		body {
+			opacity: 0;
+			animation: slide-in 1s 5s forwards;
+		}
+
+		@keyframes typing {
+			to { width: 100%; }
+		}
+
+		@keyframes fade-in {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+
+		@keyframes slide-in {
+			from { left: -100%; opacity: 0; }
+			to { left: 0%; opacity: 1; }
+		}
+
+		h1.visible {
+			visibility: visible;
+		}
+	</style>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var h1 = document.querySelector('h1');
+			h1.addEventListener("animationend", function() {
+				document.querySelector('h2').style.opacity = 1;
+				document.querySelector('body').style.opacity = 1;
+			});
+			h1.classList.add('visible');
+		});
+	</script>
+</head>
+<body>
+	<h1>Hello World!</h1>
+	<h2>Second header</h2>
+	<p>This is the body text that will slide in from the left.</p>
+</body>
+</html>
