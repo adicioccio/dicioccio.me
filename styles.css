@@ -26,11 +26,11 @@ h1 {
 }
 
 h1.visible {
-			visibility: visible;
-		}
+	visibility: visible;
+}
 
 @keyframes typing {
-			to { width: 100%; }
+	to { width: 100%; }
 }
 
 /* HEADER2 STYLING AND ANIMATION */
@@ -54,7 +54,7 @@ h2 {
 
 body {
   background: hsl(204 100% 5%);
-  min-block-size: 140vh;
+  min-block-size: 145vh;
   padding: 10vmin;
   box-sizing: border-box;
   place-content: center;
@@ -62,7 +62,7 @@ body {
 
 .slideinanimation {
 	  opacity: 0;
-		animation: slide-in 1s 5s forwards;
+		animation: slide-in 1s 4s forwards;
 }
 
 @keyframes slide-in {
@@ -76,49 +76,16 @@ footer {
 	/*TODO:  Make Footer*/
 }
 
-
-
 p {
 	font-family: FreeMono, monospace;
 	color: white;
-	margin-top: 1ch;
-	line-height: 1.35;
-	/*max-inline-size: 60ch;*/
 	margin: auto;
 	font-size: 3vmin;
-	padding: 2vmin;
+	padding: 1svmin;
 }
 
 .pCopyright {
 	font-size: 1.5vmin;
-}
-
-p span {
-	animation: color-fade 20s infinite;
-}
-
-@keyframes color-fade {
-  0% { color: red; }
-  5% { color: orangered; }
-  10% { color: orange; }
-  15% { color: yellow; }
-  20% { color: yellowgreen; }
-  25% { color: green; }
-  30% { color: cyan; }
-  35% { color: blue; }
-  40% { color: purple; }
-  45% { color: pink; }
-  50% { color: magenta; }
-  55% { color: pink; }
-  60% { color: purple; }
-  65% { color: blue; }
-  70% { color: cyan; }
-  75% { color: green; }
-  80% { color: yellowgreen; }
-  85% { color: yellow; }
-  90% { color: orange; }
-  95% { color: orangered; }
-  100% { color: red; }
 }
 
 .button1 {
@@ -167,4 +134,8 @@ html {
 	block-size: 100%;
 	inline-size: 100%;
 	text-align: center;
+}
+
+.linkhub {
+	width: 3vmin;
 }
