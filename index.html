@@ -1,37 +1,70 @@
 <DOCTYPE! html>
-	<html>
-		<link rel="stylesheet" href="styles.css">
+<html>
+	<link rel="stylesheet" href="styles.css">
+	
+	<head>
+		<meta charset="utf-8">
+		<title>dicioccio.me</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<script src="index.js"></script>
+	</head>
+	
+	<body>
+		<h1 class="colorgrad">Hi! I'm Adam Di Cioccio</h1>
+		<h2 class="colorgrad">Graduate in Computer Engineering and Computing Sciences</h2>
+		<h2>
+			<a href="https://github.com/adicioccio"><img class="linkhub" src="images/github.png"/></a>
+			<a href="mailto:adamdicioccio@gmail.com"><img class="linkhub" src="images/email.png"/></a>
+			<a href="https://www.linkedin.com/in/adam-di-cioccio-9935631ba"><img class="linkhub" src="images/linkedin.png"/></a>
+		</h2>
+		<br><br>
+		<h2><img class = "profile" src="images/me.png"></img></h2>
+		<div class="fadeinanimation">	
+			<br><br><br>
+			<p class="pOuter"><strong>About Me</strong></p>
+			<p class="pOuter">--------</p>
+			<br>
+			<p class="pOuter">I am a passionate computer engineering graduate based in Ottawa, ON. I am interested in game development, full-stack development, robotics and artificial intelligence. I am always seeking new opportunities and furthering my skills in software engineering. Feel free to contact me and I will be sure to respond as soon as possible!</p>
+			<br><br><br><br><br>
+			<p class="pOuter" ><strong>Education</strong></p>
+			<p class="pOuter" >---------</p>
+			<br>
+			<p class="pOuter" ><strong>Advanced Diploma in Computer Engineering and Computing Sciences</strong></p>
+			<p class="pOuter" >Algonquin College (2020 - 2023) <a href="https://www.algonquincollege.com/sat/program/computer-engineering-technology-computing-science/#courses"><img class="redirect"  src="images/redirect.png"/></a></p>
+			<br><br><br>
+			<p class="pOuter"><strong>High School Diploma (Honours + Bilingual Certificate)</strong></p>
+			<p class="pOuter">Holy Trinity Highschool (2016 - 2020)</p>
+			
+			<br><br><br><br><br>
+			<p class="pOuter"><strong>Experience</strong></p>
+			<p class="pOuter">----------</p>
+			<div id="menu-container" class="menu-container">
+				<div class="menu-item-experience active" onclick="showContentExperience(0)">00</div>
+				<div class="menu-item-experience" onclick="showContentExperience(1)">01</div>
+			</div>
+			<div id="bottom-container-experience" class="bottom-container-experience">
+				<script>showContentExperience(0)</script>
+			</div>
+			<br><br><br><br><br>
+			<p class="pOuter"><strong>Projects</strong></p>
+			<p class="pOuter">--------</p>
+			<div id="menu-container" class="menu-container">
+				<div class="menu-item-projects active" onclick="showContentProjects(0)">00</div>
+				<div class="menu-item-projects" onclick="showContentProjects(1)">01</div>
+				<div class="menu-item-projects" onclick="showContentProjects(2)">02</div>
+				<div class="menu-item-projects" onclick="showContentProjects(3)">03</div>
+			</div>
+			<div id="bottom-container-projects" class="bottom-container-projects">
+				<script>showContentProjects(0)</script>
+			</div>
+			<br><br><br>
+		</div>
 		
-		<head>
-			<meta charset="utf-8">
-			<title>dicioccio.me</title>
-			<link rel="shortcut icon" href="favicon.ico">
-			<script>
-				window.addEventListener('load', function() {
-					var h1 = document.querySelector('h1');
-					h1.addEventListener("animationend", function() {
-						document.querySelector('h2').style.opacity = 1;
-					});
-					h1.classList.add('visible');
-				});
-			</script>
-		</head>
-		
-		<body>
-			<h1 class="colorgrad">Hi! I'm Adam Di Cioccio</h1>
-			<h2 class="colorgrad">Computer Engineering and Computing Sciences</h2>
-			<br>
-			<h2><a href="https://github.com/adicioccio"><img class="linkhub" src="github.png"/></a>
-			<a href="https://www.linkedin.com/in/adam-di-cioccio-9935631ba"><img class="linkhub" src="linkedin.png"/></a></h3>
-			<br>
-			<br>
-			<p class="slideinanimation">I am a passionate programmer seeking experience in the workforce in order to strengthen my knowledge and capabilities.</p>
-			<!-- <button class="button1"><span>Resume</span></button> -->
+		<!-- <button class="button1"><span>Resume</span></button> -->
+	</body>
+	
+	<footer class="slideinanimation">
+		<p class="pCopyright">&copy Created by Adam Di Cioccio.</p>
+	</footer>
 
-			<br><br>
-		</body>
-		
-		<footer class="slideinanimation">
-			<p class="pCopyright">&copy Created by Adam Di Cioccio.</p>
-		</footer>
-	</html>
+</html>
